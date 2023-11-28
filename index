@@ -1,0 +1,30 @@
+using System;
+
+class GradeCalculator
+{
+    // Constants for weightage of each component
+    private const double AssignmentWeight = 0.3;
+    private const double QuizWeight = 0.2;
+    private const double ExamWeight = 0.5;
+
+    static void Main()
+    {
+        // Get user input for scores
+        Console.Write("Enter your assignment score (out of 100): ");
+        double assignmentScore = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter your quiz score (out of 100): ");
+        double quizScore = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter your exam score (out of 100): ");
+        double examScore = Convert.ToDouble(Console.ReadLine());
+
+        // Calculate overall grade
+        double overallGrade = (assignmentScore * AssignmentWeight) +
+                              (quizScore * QuizWeight) +
+                              (examScore * ExamWeight);
+
+        // Display the overall grade
+        Console.WriteLine($"\nYour overall grade is: {overallGrade}");
+    }
+}
